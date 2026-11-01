@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanshi Dangi - Personal Portfolio</title>
+    <meta name="description" content="Portfolio of Aanshi Dangi: aspiring developer, cybersecurity enthusiast and AI explorer. Still learning. Still building. Still becoming.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='16' fill='%23282522'/%3E%3Cpath d='M10.5 23 16 9l5.5 14M12.4 18.6h7.2' fill='none' stroke='%23F2EEE7' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Runs before first paint: restores the saved theme and enables motion states.
+         If script.js fails to load within 3.5s, motion states are removed so no content stays hidden. -->
+    <script>
+        (function () {
+            var r = document.documentElement;
+            var t = "light";
+            try { t = localStorage.getItem("portfolio-theme") || "light"; } catch (e) {}
+            r.dataset.theme = t === "dark" ? "dark" : "light";
+            r.classList.add("js");
+            if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+                r.classList.add("motion");
+                setTimeout(function () {
+                    if (!window.__itmReady) r.classList.remove("motion");
+                }, 3500);
+            }
+        })();
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============ HEADER ============ -->
+    <header class="site-header" id="site-header">
+        <span class="scroll-progress" aria-hidden="true"></span>
+        <nav class="nav" aria-label="Primary">
+            <a class="brand" href="#home" aria-label="IN THE MAKING. — back to top">
+                <svg class="monogram" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+                    <circle class="monogram-ring" cx="16" cy="16" r="14.5"></circle>
+                    <path class="monogram-a" d="M10.5 23 16 9l5.5 14M12.4 18.6h7.2"></path>
+                    <g class="monogram-orbit"><circle class="monogram-dot" cx="16" cy="1.5" r="2"></circle></g>
+                </svg>
+            </a>
+
+            <div class="nav-actions">
+                <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Switch to dark theme">
+                    <span class="theme-toggle-label">Dark</span>
+                </button>
+                <button type="button" id="menu-toggle" class="menu-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">
+                    <span class="orbit-icon" aria-hidden="true">
+                        <span></span><span></span><span></span><span></span>
+                    </span>
+                </button>
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+                <li style="--i:0"><a href="#home">Home</a></li>
+                <li style="--i:1"><a href="#about">About</a></li>
+                <li style="--i:2"><a href="#skills">Skills</a></li>
+                <li style="--i:3"><a href="#projects">Projects</a></li>
+                <li style="--i:4"><a href="#journey">Journey</a></li>
+                <li style="--i:5"><a href="#beyondwork">Beyond Work</a></li>
+                <li style="--i:6"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main" tabindex="-1">
+
+        <!-- ============ A. HERO ============ -->
+        <section id="home" class="hero" aria-labelledby="hero-title">
+            <div class="hero-orbit" aria-hidden="true" data-hero="ring">
+                <span class="hero-ring hero-ring-circle"></span>
+                <span class="hero-ring hero-ring-ellipse"></span>
+                <span class="hero-dot"></span>
+            </div>
+
+            <div class="hero-inner">
+                <p class="eyebrow" data-hero style="--hd:.1s">PORTFOLIO • 2026</p>
+
+                <div class="hero-main">
+                    <h1 class="hero-title" id="hero-title">
+                        <span class="line"><span class="word" style="--w:0"><span>IN</span></span> <span class="word" style="--w:1"><span>THE</span></span></span>
+                        <span class="line"><span class="word" style="--w:2"><span>MAKING.</span></span></span>
+                    </h1>
+
+                    <div class="hero-foot">
+                        <p class="hero-name" data-split="chars">Aanshi Dangi.</p>
+                        <div class="hero-about">
+                            <p class="hero-role" data-hero style="--hd:1.25s">Aspiring Developer · Cybersecurity Enthusiast · AI Explorer</p>
+                            <p class="hero-tagline" data-hero style="--hd:1.4s">Building, learning, and turning ideas into reality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ B. ABOUT ============ -->
+        <section id="about" class="section about" aria-labelledby="about-title">
+            <span class="about-ring" aria-hidden="true" data-scrub="ring"></span>
+            <div class="about-grid">
+                <header class="section-head" data-parallax="-0.07">
+                    <p class="eyebrow" data-scrub="rise">GET TO KNOW ME</p>
+                    <h2 class="display" id="about-title" data-scrub="mask"><span>Beyond the Screen.</span></h2>
+                </header>
+
+                <div class="about-body" data-parallax="0.06">
+                    <p class="about-lead" data-scrub="focus">
+                        I’m a computer science student passionate about technology, creativity, and continuous learning.
+                    </p>
+                    <p data-scrub="focus" data-delay=".12">
+                        I’m exploring web development, artificial intelligence, and cybersecurity, and building projects that turn ideas into reality.
+                    </p>
+                    <p class="about-note" data-scrub="focus" data-delay=".24">
+                        This site is a work in progress, and so am I.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ C. SKILLS ============ -->
+        <section id="skills" class="section skills" aria-labelledby="skills-title">
+            <header class="section-head">
+                <p class="eyebrow" data-scrub="rise">WHAT I WORK WITH</p>
+                <h2 class="display" id="skills-title" data-scrub="mask"><span>My Toolkit.</span></h2>
+                <p class="section-intro" data-scrub="focus">
+                    The technologies I’m learning and using to bring my ideas to life.
+                </p>
+            </header>
+
+            <div class="skill-deck">
+                <article class="skill-card" data-scrub="card" data-delay="0">
+                    <h3>Programming Languages</h3>
+                    <p>C, Python, JavaScript</p>
+                </article>
+
+                <article class="skill-card" data-scrub="card" data-delay="0.08">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </article>
+
+                <article class="skill-card" data-scrub="card" data-delay="0.16">
+                    <h3>Tools &amp; Technologies</h3>
+                    <p>Git, GitHub, VS Code</p>
+                </article>
+
+                <article class="skill-card" data-scrub="card" data-delay="0.24">
+                    <h3>Currently Exploring</h3>
+                    <p>Artificial Intelligence, Cybersecurity</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ D. PROJECTS ============ -->
+        <section id="projects" class="section projects" aria-labelledby="projects-title">
+            <header class="section-head">
+                <p class="eyebrow" data-scrub="rise">SELECTED WORK</p>
+                <h2 class="display" id="projects-title" data-scrub="mask"><span>Ideas in orbit.</span></h2>
+                <p class="section-intro" data-scrub="focus">
+                    Every project begins as a thought. Some become experiments; others become something real.
+                </p>
+            </header>
+
+            <div class="projects-layout">
+                <!-- EDIT: replace the names and descriptions below with your real projects.
+                     Keep the three data-planet values (one, two, three) so each row stays linked to its planet.
+                     Also update the matching planet labels inside .orbit-system. -->
+                <ol class="project-list">
+                    <li class="project-item" data-planet="one" data-scrub="row" data-delay="0">
+                        <span class="project-index">01</span>
+                        <div>
+                            <h3>Portfolio</h3>
+                            <p>This website, designed and built from scratch with HTML, CSS, and vanilla JavaScript.</p>
+                        </div>
+                    </li>
+                    <li class="project-item" data-planet="two" data-scrub="row" data-delay="0.1">
+                        <span class="project-index">02</span>
+                        <div>
+                            <h3>Global Olympic Sports Performance Analysis</h3>
+                            <p>A data analytics project using Tableau and real datasets.</p>
+                        </div>
+                    </li>
+                    <li class="project-item" data-planet="three" data-scrub="row" data-delay="0.2">
+                        <span class="project-index">03</span>
+                        <div>
+                            <h3>Exploring</h3>
+                            <p>learning and developing...</p>
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="orbit-stage" data-scrub="orbit">
+                    <div class="orbit-system" role="img" aria-label="Diagram of three project planets orbiting the words IN THE MAKING.">
+                        <span class="orbit-ring ring-one"></span>
+                        <span class="orbit-ring ring-two"></span>
+                        <span class="orbit-ring ring-three"></span>
+
+                        <span class="orbit-dot dot-one"></span>
+                        <span class="orbit-dot dot-two"></span>
+                        <span class="orbit-dot dot-three"></span>
+
+                        <div class="orbit-center">
+                            <span>IN THE</span>
+                            <strong>MAKING.</strong>
+                        </div>
+
+                        <div class="orbit-planet planet-one" data-planet="one"><span>01</span><p>Portfolio</p></div>
+                        <div class="orbit-planet planet-two" data-planet="two"><span>02</span><p>Tableau data analytics project</p></div>
+                        <div class="orbit-planet planet-three" data-planet="three"><span>03</span><p>Exploring</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ E. JOURNEY ============ -->
+        <section id="journey" class="section journey" aria-labelledby="journey-title">
+            <header class="section-head">
+                <p class="eyebrow" data-scrub="rise">THE PATH SO FAR</p>
+                <h2 class="display" id="journey-title" data-scrub="mask"><span>My Journey</span></h2>
+            </header>
+
+            <div class="journey-timeline">
+                <span class="journey-line" aria-hidden="true"></span>
+
+                <article class="journey-item">
+                    <span class="journey-number" aria-hidden="true">01</span>
+                    <div class="journey-content">
+                        <h3>Education</h3>
+                        <p>B.Tech in Computer Science Engineering</p>
+                        <p>Medicaps University, Indore</p>
+                        <p>Currently pursuing my degree.</p>
+                    </div>
+                </article>
+
+                <article class="journey-item">
+                    <span class="journey-number" aria-hidden="true">02</span>
+                    <div class="journey-content">
+                        <h3>Leadership &amp; Community</h3>
+                        <p>Building a student-led tech community to learn, collaborate, and create projects together.</p>
+                    </div>
+                </article>
+
+                <article class="journey-item">
+                    <span class="journey-number" aria-hidden="true">03</span>
+                    <div class="journey-content">
+                        <h3>Certifications &amp; Achievements</h3>
+                        <p class="certificate-intro">A record of the skills I build, the things I learn, and the milestones I earn.</p>
+
+                        <div class="certificate-grid">
+                            <article class="certificate-card" data-scrub="row" data-delay="0.00">
+                                <span class="certificate-index">01 / CERTIFICATE</span>
+                                <h4>GEN AI NASSCOM</h4>
+                                <p>SFJ</p>
+                                <p class="certificate-date">20 Oct 2026</p>
+                                <a class="certificate-link" href="certificates/gen-ai-nasscom.png" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+                            </article>
+                            <article class="certificate-card" data-scrub="row" data-delay="0.06">
+                                <span class="certificate-index">02 / CERTIFICATE</span>
+                                <h4>Exploratory Data Analysis</h4>
+                                <p>FutureSkills Prime · IT-ITeS SSC, Nasscom</p>
+                                <p class="certificate-date">07 Aug 2026</p>
+                                <a class="certificate-link" href="certificates/exploratory-data-analysis.pdf" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+                            </article>
+                            <article class="certificate-card" data-scrub="row" data-delay="0.12">
+                                <span class="certificate-index">03 / GOLD CERTIFICATION</span>
+                                <h4>Vibe Coding — AI Assisted Application Development</h4>
+                                <p>FutureSkills Prime · IT-ITeS SSC, Nasscom</p>
+                                <p class="certificate-date">22 Oct 2026 · 100%</p>
+                                <a class="certificate-link" href="certificates/vibe-coding-ai-assisted-development.pdf" target="_blank" rel="noopener noreferrer">View Gold certificate ↗</a>
+                            </article>
+                            <article class="certificate-card" data-scrub="row" data-delay="0.18">
+                                <span class="certificate-index">04 / TRAINING CERTIFICATE</span>
+                                <h4>JavaScript Test</h4>
+                                <p>EduPyramids · SINE, IIT Bombay</p>
+                                <p class="certificate-date">10 Oct 2026 · Score: 77.50%</p>
+                                <a class="certificate-link" href="certificates/javascript-test-edu-pyramids.pdf" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+                            </article>
+                            <article class="certificate-card" data-scrub="row" data-delay="0.24">
+                                <span class="certificate-index">05 / CERTIFICATE OF PARTICIPATION</span>
+                                <h4>Student Training Programme</h4>
+                                <p>Medi-Caps University · EduPyramids, SINE, IIT Bombay</p>
+                                <p class="certificate-date">01–30 Sep 2026</p>
+                                <a class="certificate-link" href="certificates/student-training-programme.pdf" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+                            </article>
+                            <article class="certificate-card" data-scrub="row" data-delay="0.30">
+                                <span class="certificate-index">06 / GOLD CERTIFICATION</span>
+                                <h4>Certificate Program in MERN Stack</h4>
+                                <p>FutureSkills Prime · IT-ITeS SSC, Nasscom</p>
+                                <p class="certificate-date">07 Aug 2026 · Score: 97%</p>
+                                <a class="certificate-link" href="certificates/mern-stack-gold-assessment.pdf" target="_blank" rel="noopener noreferrer">View Gold certificate ↗</a>
+                            </article>
+                            <article class="certificate-card" data-scrub="row" data-delay="0.36">
+                                <span class="certificate-index">07 / CERTIFICATE OF COMPLETION</span>
+                                <h4>Certificate Program in MERN Stack</h4>
+                                <p>FutureSkills Prime · IT-ITeS SSC, Nasscom</p>
+                                <p class="certificate-date">30 Jul 2026</p>
+                                <a class="certificate-link" href="certificates/mern-stack-completion.pdf" target="_blank" rel="noopener noreferrer">View certificate ↗</a>
+                            </article>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ F. BEYOND WORK ============ -->
+        <section id="beyondwork" class="section beyond" aria-labelledby="beyond-title">
+            <span class="beyond-ring" aria-hidden="true"></span>
+
+            <div class="beyond-layout">
+                <div class="beyond-statement">
+                    <h2 class="beyond-title" id="beyond-title">
+                        <span class="eyebrow beyond-kicker" data-scrub="rise">A little more than</span>
+                        <span class="beyond-word">Logic.</span>
+                    </h2>
+                    <p class="beyond-lede" data-scrub="focus">
+                        A curious mind, always exploring, learning and becoming.
+                    </p>
+
+                    <div class="curiosity-orbit" data-scrub="pop">
+                        <span aria-hidden="true">∞</span>
+                        <p>ALWAYS EXPLORING</p>
+                    </div>
+                </div>
+
+                <div class="beyond-notes">
+                    <div class="beyond-item" data-scrub="row" data-delay="0">
+                        <p class="eyebrow">CURRENTLY LEARNING</p>
+                        <div>
+                            <h3>The art of getting better.</h3>
+                            <p>Web Development · Data Structures &amp; Algorithms</p>
+                        </div>
+                    </div>
+
+                    <div class="beyond-item" data-scrub="row" data-delay="0.1">
+                        <p class="eyebrow">CURIOUS ABOUT</p>
+                        <div>
+                            <h3>Worlds beyond the obvious.</h3>
+                            <p>Artificial Intelligence · Cybersecurity</p>
+                        </div>
+                    </div>
+
+                    <div class="beyond-item" data-scrub="row" data-delay="0.2">
+                        <p class="eyebrow">MY PHILOSOPHY</p>
+                        <div>
+                            <h3>Stay curious. Keep becoming.</h3>
+                            <p>Progress over perfection.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ G. CONTACT ============ -->
+        <section id="contact" class="section contact" aria-labelledby="contact-title">
+            <div class="contact-inner">
+                <h2 class="contact-title" id="contact-title" data-reveal="mask"><span>Something on your mind?</span></h2>
+                <p class="contact-highlight" data-reveal="mask"><span>Let’s make it happen.</span></p>
+
+                <p class="contact-copy" data-reveal="rise">
+                    I’m always open to connecting with people, exploring opportunities, and building something meaningful together.
+                </p>
+
+                <div class="contact-links" data-reveal="rise">
+                    <a href="mailto:aanshidangi01@gmail.com?subject=Hello%20Aanshi" id="email-link">Email Me</a>
+                    <a href="mailto:aanshidangi01@gmail.com?subject=Portfolio%20Feedback" id="feedback-link">Share Feedback</a>
+                    <a href="https://github.com/Aanshi-00" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/aanshi-dangi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+                <br>
+                <button type="button" class="email-copy" id="copyEmailBtn">
+                    <span id="emailText">aanshidangi01@gmail.com</span>
+                    <span class="copy-icon">⧉</span>
+                </button>
+
+                <span id="copyStatus" aria-live="polite"></span>
+
+                <p class="contact-sign" data-reveal="rise">Still learning. Still building. Still becoming.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ H. FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="footer-top" data-scrub="rise">
+            <a href="#home" class="footer-brand">IN THE MAKING.</a>
+            <a href="#home" class="back-to-top">BACK TO TOP ↑</a>
+        </div>
+
+        <div class="footer-bottom" data-scrub="rise" data-delay=".1">
+            <p>Designed &amp; Built by Aanshi Dangi.</p>
+            <p>© 2026</p>
+            <p>STILL BECOMING.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <div class="custom-cursor" aria-hidden="true"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
